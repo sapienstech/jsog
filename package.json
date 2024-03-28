@@ -8,7 +8,7 @@
     "moment": "^2.9.0"
   },
   "scripts": {
-    "compile": "coffee --compile --output lib/ src/*.coffee && coffee --compile --output test/ src-test/*.coffee",
+    "compile": "coffee --compile --output lib/ src/JSOG.coffee && coffee --compile --output test/ src-test/JSOGtest.coffee",
     "build": "npm run-script compile",
     "prepublish": "npm run-script compile",
     "test": "npm run-script compile && ./node_modules/.bin/mocha"
