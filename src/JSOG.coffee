@@ -98,6 +98,8 @@ JSOG.decode = (encoded, idProperty = '@id', refProperty = '@ref') ->
 
 		if !encoded?
 			return encoded
+		else if encoded instanceof Date
+		    return encoded
 		else if isArray(encoded)
 			return decodeArray(encoded)
 		else if typeof encoded == 'object'
@@ -116,8 +118,8 @@ JSOG.stringify = (obj) ->
 #
 # Like JSON.parse, but understands JSOG
 #
-JSOG.parse = (str) ->
-	return JSOG.decode(JSON.parse(str))
+JSOG.parse = (str, revive ) ->
+	return JSOG.decode(JSON.parse(str, revive ))
 
 
 #
