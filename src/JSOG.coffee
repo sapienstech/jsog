@@ -98,6 +98,8 @@ JSOG.decode = (encoded, idProperty = '@id', refProperty = '@ref') ->
 
 		if !encoded?
 			return encoded
+		else if encoded instanceof Date
+		    return encoded
 		else if isArray(encoded)
 			return decodeArray(encoded)
 		else if typeof encoded == 'object'
