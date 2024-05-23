@@ -116,8 +116,8 @@ JSOG.stringify = (obj) ->
 #
 # Like JSON.parse, but understands JSOG
 #
-JSOG.parse = (str) ->
-	return JSOG.decode(JSON.parse(str))
+JSOG.parse = (str, revive ) ->
+	return JSOG.decode(JSON.parse(str, revive ))
 
 
 #
